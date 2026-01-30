@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAST LIST | LUX NOVA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css"> <!-- Reusing some profile styles for typography -->
+    <style>
+        .cast-list-page {
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .page-header h1 {
+            font-size: 4rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            letter-spacing: 5px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cast-grid-full {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        @media (max-width: 1024px) {
+            .cast-grid-full {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cast-grid-full {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .back-home-link {
+            display: block;
+            text-align: center;
+            margin-top: 60px;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }
+
+        .back-home-link:hover {
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="scrolled"> <!-- Force compact header style -->
+        <a href="index.html" class="logo">LUX NOVA</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#concept">CONCEPT</a></li>
+                <li><a href="cast_list.html" style="color: var(--primary-color);">CAST</a></li>
+                <li><a href="index.html#system">SYSTEM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cast-list-page">
+        <div class="page-header">
+            <h1>CAST LIST</h1>
+            <p>煌めく星々、ここに集結。</p>
+        </div>
+
+        <div class="cast-grid-full">
+            <!-- Ren -->
+            <a href="profile/ren.html" class="cast-card">
+                <div class="cast-img-container">
+                    <img src="images/cast_ren.jpg" alt="Ren" class="cast-img">
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">No.1 DIRECTOR</span>
+                    <h3 class="cast-name">REN / 蓮</h3>
+                </div>
+            </a>
+            <!-- Kaito -->
+            <a href="profile/kaito.html" class="cast-card">
+                <div class="cast-img-container">
+                    <img src="images/cast_kaito.jpg" alt="Kaito" class="cast-img">
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">EXECUTIVE PLAYER</span>
+                    <h3 class="cast-name">KAITO / 海斗</h3>
+                </div>
+            </a>
+            <!-- Shou -->
+            <a href="profile/shou.html" class="cast-card">
+                <div class="cast-img-container">
+                    <img src="images/cast_shou.jpg" alt="Shou" class="cast-img">
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">PRODUCER</span>
+                    <h3 class="cast-name">SHOU / 翔</h3>
+                </div>
+            </a>
+            <!-- Yuki -->
+            <a href="profile/yuki.html" class="cast-card">
+                <div class="cast-img-container">
+                    <img src="images/cast_yuki.jpg" alt="Yuki" class="cast-img">
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">EXECUTIVE PLAYER</span>
+                    <h3 class="cast-name">YUKI / 悠希</h3>
+                </div>
+            </a>
+
+            <!-- Additional placeholders to show it's a "list" -->
+            <div class="cast-card" style="opacity: 0.8;">
+                <div class="cast-img-container"
+                    style="background: #222; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #444; font-size: 0.8rem;">SOON</span>
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">JUNIOR</span>
+                    <h3 class="cast-name">HARU / 春</h3>
+                </div>
+            </div>
+            <div class="cast-card" style="opacity: 0.8;">
+                <div class="cast-img-container"
+                    style="background: #222; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #444; font-size: 0.8rem;">SOON</span>
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">JUNIOR</span>
+                    <h3 class="cast-name">RIKU / 陸</h3>
+                </div>
+            </div>
+            <div class="cast-card" style="opacity: 0.8;">
+                <div class="cast-img-container"
+                    style="background: #222; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #444; font-size: 0.8rem;">SOON</span>
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">TRAINEE</span>
+                    <h3 class="cast-name">TOMA / 斗真</h3>
+                </div>
+            </div>
+            <div class="cast-card" style="opacity: 0.8;">
+                <div class="cast-img-container"
+                    style="background: #222; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #444; font-size: 0.8rem;">SOON</span>
+                </div>
+                <div class="cast-info">
+                    <span class="cast-rank">TRAINEE</span>
+                    <h3 class="cast-name">ASAHI / 旭</h3>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-home-link">BACK TO HOME</a>
+    </main>
+
+    <footer>
+        <span class="logo footer-logo">LUX NOVA</span>
+        <div class="footer-info">
+            <p>&copy; 2026 LUX NOVA GROUP. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
