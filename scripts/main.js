@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
-    
+
     // Header background change on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -11,17 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links
     document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSector = document.querySelector(targetId);
-            
-            if (targetSector) {
-                window.scrollTo({
-                    top: targetSector.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+        anchor.addEventListener('click', function (e) {
+            const targetAttr = this.getAttribute('href');
+            // Check if it's a hash link (starts with #) or references an ID on the current page
+            if (targetAttr.startsWith('#') || (targetAttr.includes('#') && targetAttr.split('#')[0] === window.location.pathname.split('/').pop())) {
+                e.preventDefault();
+                const targetId = targetAttr.includes('#') ? '#' + targetAttr.split('#')[1] : targetAttr;
+                const targetSector = document.querySelector(targetId);
+
+                if (targetSector) {
+                    window.scrollTo({
+                        top: targetSector.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
